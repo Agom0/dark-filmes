@@ -18,6 +18,11 @@ export default function Cadastrar() {
     async function handleSubmit(event) {
         event.preventDefault();
 
+        if(! titulo || diretor || !ano || !genero || !nota || !sinopse || !banner) {
+            toast.error("Preencha todos os campos")
+            return;
+        }
+
         try {
             await instance.post("/api/movies", {
                 titulo: titulo,

@@ -19,7 +19,7 @@ export default function Filme() {
                 }
 
                 if(id){
-                    GetfilmeById
+                    GetfilmeById()
                 }
 
             },[])          
@@ -41,8 +41,8 @@ export default function Filme() {
                         <div className="w-full h-[90%]">
                             <img
                                 className="w-full h-full rounded-lg object-cover"
-                                src="https://cdn1.epicgames.com/offer/fda0f2b4047f46ffb4e94d5595c1468e/EGS_MortalKombat1KhaosReignsKollection_NetherRealmStudiosQLOC_Editions_S2_1200x1600-2ddf4ca9b43a4c1385de2fe99c68df21"
-                                alt=""
+                                src={filme.banner}
+                                alt={filme.titulo}
                             />
                         </div>
                         <div className="w-full flex h-[10%] pt-4 justify-between">
@@ -55,24 +55,24 @@ export default function Filme() {
                     </div>
                     <div className=" w-[70%] pl-4 h-full flex flex-col">
                         <div className="w-full flex gap-2 items-baseline">
-                            <h1 className="text-[35px] text-[#9b87f5]">MortalKombat</h1>
-                            <p className="text-[#8a898c] font-semibold text-[17px]">(ano do filme)</p>
+                            <h1 className="text-[35px] text-[#9b87f5] font-bold">{filme.titulo}</h1>
+                            <p className="text-[#8a898c] font-semibold text-[17px]">{filme.ano}</p>
                         </div>
                         <div className="w-full gap-4 flex">
                             <div className="py-2 px-4 rounded-xl bg-[#4ade80]/20 text-[#4ade80]">
                                 <p className="text-[17px]">10/10</p>
                             </div>
                             <div className="py-2 px-4 rounded-xl bg-[#9b87f5]/20 text-[#9b87f5]">
-                                <p className="text-[17px]">Ação</p>
+                                <p className="text-[17px]">{filme.genero}</p>
                             </div>
                         </div>
                         <div className="w-full flex flex-col mt-8">
-                            <h4 className="font-bold text-[20px]">Diretor</h4>
-                            <p className="text-[#898a8c]">Sei la</p>
+                            <h4 className="font-bold text-[20px]">{filme.diretor}</h4>
+                            <p className="text-[#898a8c]">{filme.sinopse}</p>
                         </div>
                         <div className="w-full flex flex-col mt-8">
-                            <h4 className="font-bold text-[20px]">Sinopse</h4>
-                            <p className="text-[#898a8c]">Não sei</p>
+                            <h4 className="font-bold text-[20px]">{filme.sinopse}</h4>
+                            <p className="text-[#898a8c]">{filme.diretor}</p>
                         </div>
                     </div>
                 </div>
